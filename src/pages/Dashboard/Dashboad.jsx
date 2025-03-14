@@ -3,6 +3,7 @@ import Tilt from "react-parallax-tilt";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import Loader from "@/layout/Loader";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Dashboard = () => {
   if (!user) {
     return (
       <div className="flex items-center justify-center h-screen bg-white">
-        <p className="text-gray-600 text-lg font-medium">Loading user data...</p>
+        <p className="text-gray-600 text-lg font-medium"><Loader/></p>
       </div>
     );
   }
