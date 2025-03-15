@@ -2,16 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Home, Users, Dumbbell, BarChart2, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import menuItems from "@/constants/admin/Adminsidebar";
 
 const AdminSidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-
-  const menuItems = [
-    { name: "Dashboard", icon: Home, path: "/" },
-    { name: "Users", icon: Users, path: "/admin/users" },
-    { name: "Exercises", icon: Dumbbell, path: "/admin/exercises" },
-    { name: "Reports", icon: BarChart2, path: "/admin/reports" },
-  ];
 
   return (
     <nav

@@ -2,13 +2,10 @@ import { useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Pencil, Trash } from "lucide-react";
+import { exerciseData } from "@/constants/admin/ExeciseData";
 
 const ExerciseTable = () => {
-  const [exercises, setExercises] = useState([
-    { id: 1, name: "Push-up", category: "Bodyweight", equipment: "None" },
-    { id: 2, name: "Bench Press", category: "Strength", equipment: "Barbell" },
-    { id: 3, name: "Squat", category: "Strength", equipment: "Barbell" },
-  ]);
+  const [exercises, setExercises] = useState(exerciseData);
 
   const handleEdit = (id) => {
     console.log("Edit exercise with id:", id);

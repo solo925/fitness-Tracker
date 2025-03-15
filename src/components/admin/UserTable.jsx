@@ -2,13 +2,10 @@ import { useState } from "react";
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Pencil, Trash } from "lucide-react";
+import { usersData } from "@/constants/admin/userTable";
 
 const UserTable = () => {
-  const [users, setUsers] = useState([
-    { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
-    { id: 2, name: "Jane Smith", email: "jane@example.com", role: "User" },
-    { id: 3, name: "Alice Johnson", email: "alice@example.com", role: "Moderator" },
-  ]);
+  const [users, setUsers] = useState(usersData);
 
   const handleDelete = (id) => {
     setUsers(users.filter(user => user.id !== id));
