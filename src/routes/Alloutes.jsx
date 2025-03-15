@@ -47,9 +47,9 @@ const AppRoutes = () => {
       <Route
         path="/admin/*"
         element={
-        //   <AdminProtectedRoute>
+          <AdminProtectedRoute>
             <AdminRoutes />
-        //   </AdminProtectedRoute>
+          </AdminProtectedRoute>
         }
       />
 
